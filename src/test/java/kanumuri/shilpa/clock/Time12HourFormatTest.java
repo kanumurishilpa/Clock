@@ -33,16 +33,16 @@ public class Time12HourFormatTest {
 
     @Test
     public void splitStringTest(){
-        String[] expected = {"11", "25", "am"};
+        String[] expected = {"11",":","25", "am"};
         String[] actual = time12HoursFormat.splitString("11:25am");
         Assert.assertArrayEquals(expected,actual);
     }
 
     @Test
     public void test12HourFormat(){
-        Time expected = new Time(3,30,"pm");
-        Time actual = time12HoursFormat.extractTimeFormat("3:30pm");
-        Assert.assertEquals(expected,actual);
+        String expected = new Time(3,30,"pm").toString();
+        String actual = time12HoursFormat.extractTimeFormat("3:30pm").toString();
+        Assert.assertTrue(expected.equals(actual));
     }
 
 

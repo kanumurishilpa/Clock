@@ -40,9 +40,9 @@ public class Time24HourFormatTest {
 
     @Test
     public void test24HourFormat(){
-        Time expected = new Time(3,30);
-        Time actual = time24HoursFormat.extractTimeFormat("3:30");
-        Assert.assertEquals(expected,actual);
+        String expected = new Time(3,30).toString();
+        String actual = time24HoursFormat.extractTimeFormat("3:30").toString();
+        Assert.assertTrue(expected.equals(actual));
     }
 
 }
