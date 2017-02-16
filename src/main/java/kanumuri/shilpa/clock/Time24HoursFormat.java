@@ -28,12 +28,9 @@ public class Time24HoursFormat implements TimeValidatorAndParser{
 
     public Time extractTimeFormat(String givenTime){
         String[] splitString;
-        if(validate(givenTime) == true){
-            splitString = splitString(givenTime);
-            time = new Time(Integer.parseInt(splitString[0]),Integer.parseInt(splitString[1]));
-        }
+        splitString = splitString(givenTime);
+        time = new Time(Integer.parseInt(splitString[0]),Integer.parseInt(splitString[1]));
         return time;
-
     }
 
     public String[] splitString(String stringToBeSplit){

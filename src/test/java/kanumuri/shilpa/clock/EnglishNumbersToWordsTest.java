@@ -36,4 +36,18 @@ public class EnglishNumbersToWordsTest {
         String actual = EnglishNumberToWords.convert(35);
         Assert.assertTrue(actual.equals(" thirty five"));
     }
+
+    @Test
+    public void convertTest4(){
+        boolean expected = true;
+        String actual = EnglishNumberToWords.convert(0);
+        Assert.assertTrue(actual.equals(""));
+    }
+
+    @Test
+    public void convertTest5(){
+        boolean expected = true;
+        String actual = EnglishNumberToWords.convert(99);
+        Assert.assertTrue(actual.equals(" ninety nine"));
+    }
 }

@@ -19,6 +19,18 @@ public class Time {
         this.amOrpm = amOrpm;
     }
 
+    public int getHours() {
+        return hours;
+    }
+
+    public int getMinutes() {
+        return minutes;
+    }
+
+    public String getAmOrpm() {
+        return amOrpm;
+    }
+
     @Override
     public String toString() {
         return "Time{" +
