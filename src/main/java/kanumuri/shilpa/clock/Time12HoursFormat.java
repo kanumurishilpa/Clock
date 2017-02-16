@@ -28,7 +28,6 @@ public class Time12HoursFormat implements TimeValidatorAndParser{
     }
 
     public Time extractTimeFormat(String givenTime){
-
         String[] splitString;
         splitString = splitString(givenTime);
         time = new Time(Integer.parseInt(splitString[0]),Integer.parseInt(splitString[2]),splitString[3]);

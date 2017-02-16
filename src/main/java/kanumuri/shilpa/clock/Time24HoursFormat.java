@@ -20,10 +20,8 @@ public class Time24HoursFormat implements TimeValidatorAndParser{
     }
 
     public boolean validate(final String time){
-
         matcher = pattern.matcher(time);
         return matcher.matches();
-
     }
 
     public Time extractTimeFormat(String givenTime){
