@@ -33,17 +33,16 @@ public class Time12HoursFormat implements TimeValidatorAndParser{
 
         if(validate(givenTime) == true){
             splitString = splitString(givenTime);
-            for(String s : splitString){
-                System.out.println(s);
-            }
-            time = new Time(Integer.parseInt(splitString[0]),Integer.parseInt(splitString[1]),splitString[2]);
+            time = new Time(Integer.parseInt(splitString[0]),Integer.parseInt(splitString[2]),splitString[3]);
         }
         return time;
-
     }
 
     public String[] splitString(String stringToBeSplit){
-        splitterString = stringToBeSplit.split("(\\s)(?=([01]?\\d:[0-6]?\\d\\s?([Aa]|[Pp])[Mm]))");
+        splitterString = stringToBeSplit.split("(?<=\\D)(?=\\d)|(?<=\\d)(?=\\D)");
+        for (String s : splitterString) {
+            System.out.println(s);
+        }
         return splitterString;
     }
 

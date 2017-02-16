@@ -19,23 +19,12 @@ public class Time {
         this.amOrpm = amOrpm;
     }
 
-    public void print(){
-        System.out.println(hours);
-        System.out.println(minutes);
-        //System.out.println(amOrpm);
-    }
-
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Time)) return false;
-
-        Time time = (Time) o;
-
-        if (hours != time.hours) return false;
-        if (minutes != time.minutes) return false;
-        return amOrpm.equals(time.amOrpm);
+    public String toString() {
+        return "Time{" +
+                "hours=" + hours +
+                ", minutes=" + minutes +
+                ", amOrpm='" + amOrpm + '\'' +
+                '}';
     }
-
-
 }
